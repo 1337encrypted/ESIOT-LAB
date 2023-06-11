@@ -5,21 +5,21 @@ interface dht11 temperature sensor with arduino uno to display temperature and h
 
 ### To clone the repository
 
-- git clone https://github.com/1337encrypted/ESIOT-LAB.git
+`git clone https://github.com/1337encrypted/ESIOT-LAB.git`
 
 ### To add files to the repository
 
-- git add <filename>
+`git add <filename>`
 
 ### To query the status of the files
 
-- git status
+`git status`
 
 ### To commit to the main branch
 
-- git commit -m "message"
+`git commit -m "message"`
 
 ### Finally push the files to github
 
-- git push -u origin main
+`git push -u origin main`
 
