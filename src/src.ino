@@ -13,4 +13,5 @@ void loop()
     buzz.off();
 
   dth.display();
+  buzz.display();
 }
