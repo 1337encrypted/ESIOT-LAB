@@ -5,6 +5,7 @@ class buzzer
 {
   private: 
     uint8_t buzzpin;
+    int delayTime;
 
   public:
     buzzer(const uint8_t);
