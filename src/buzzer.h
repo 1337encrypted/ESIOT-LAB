@@ -4,13 +4,13 @@
 class buzzer
 {
   private: 
-    int buzzpin;
+    uint8_t buzzpin;
 
   public:
-    buzzer(const int);
+    buzzer(const uint8_t);
     void begin();
-    ~buzzer();
     void on();
     void off();
+    void display();
 };
 #endif  //END BUZZER_H
