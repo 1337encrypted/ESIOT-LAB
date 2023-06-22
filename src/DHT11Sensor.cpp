@@ -1,6 +1,9 @@
-#include "DHTSensor.h"
+#include "DHT11Sensor.h"
 
-DHT11Sensor::DHT11Sensor(int pin) : pin(pin), dht(pin, DHT11) {}
+DHT11Sensor::DHT11Sensor(uint8_t pin) {
+  this->pin = pin;
+  dht=new DHT(pin,DHT11);
+}
 
 void DHT11Sensor::begin() {
   dht.begin();
@@ -18,11 +21,12 @@ void DHT11Sensor::display() {
   float temperature = readTemperature();
   float humidity = readHumidity();
 
-  Serial.print("Temperature: ");
-  Serial.print(temperature);
-  Serial.print("°C, Humidity: ");
+  Serial.print("Humidity: ");
   Serial.print(humidity);
-  Serial.println("%");
+  Serial.print(" %;");
+  Serial.print(" Temperature : ");
+  Serial.print(temperature);
+  Serial.println(" °C;");
 }
 
 bool DHT11Sensor::alarmTemperature() {
@@ -31,3 +35,4 @@ bool DHT11Sensor::alarmTemperature() {
     return true;
   }
   return false;
+}

@@ -1,4 +1,4 @@
-//#include "DTH22Sensor.h"
+#include "DHT11Sensor.h"
 #include "buzzer.h"
 #include  "Arduino.h"
 
