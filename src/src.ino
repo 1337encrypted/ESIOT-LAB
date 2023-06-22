@@ -1,24 +1,19 @@
 #include "GLOBALS.h"
 
-void setup()
+void setup() 
 {
   Serial.begin(9600);
-  dhtSensor.begin();
 }
 
-void loop()
+void loop() 
 {
-  if(digitalRead(button) == LOW)
-  {
+  
+  if (dht.alarmTemperature()) 
     buzz.on();
-  }
-    
-  else
-  {
+  else 
     buzz.off();
-  }
-    
 
-//  dth.display();
-  buzz.display();
+  dht.display();
+
+  delay(500);
 }
