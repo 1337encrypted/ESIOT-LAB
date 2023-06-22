@@ -1,20 +1,20 @@
 #include "DHT11Sensor.h"
 
 DHT11Sensor::DHT11Sensor(uint8_t pin) {
-  this->pin = pin;
-  dht=new DHT(pin,DHT11);
+  this->dhtPin = pin;
+  dht=new DHT(this->dhtPin, DHT11);
 }
 
 void DHT11Sensor::begin() {
-  dht.begin();
+  dht->begin();
 }
 
 float DHT11Sensor::readTemperature() {
-  return dht.readTemperature();
+  return dht->readTemperature();
 }
 
 float DHT11Sensor::readHumidity() {
-  return dht.readHumidity();
+  return dht->readHumidity();
 }
 
 void DHT11Sensor::display() {
@@ -31,9 +31,8 @@ void DHT11Sensor::display() {
 
 bool DHT11Sensor::alarmTemperature() {
   float temperature = readTemperature();
-  if (temperature > 25.0) {
+  if (temperature > 25.0)
     return true;
-  }
-  return false;
->>>>>>> refs/remotes/origin/main
+  else
+    return false;
 }

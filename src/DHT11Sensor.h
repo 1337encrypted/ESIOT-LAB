@@ -13,6 +13,7 @@ class DHT11Sensor
 
   public:
     DHT11Sensor(uint8_t);
+    void begin();
     float readTemperature();
     float readHumidity();
     bool alarmTemperature();
