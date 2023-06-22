@@ -1,44 +1,39 @@
 #include "DHT11Sensor.h"
 
-DHT11Sensor::DHT11Sensor(uint8_t dhtPin) 
-{
-  this->dhtPin = dhtPin;
-  this->dht = new DHT(this->dhtPin, DHT11);
-  dht->begin();
+DHT11Sensor::DHT11Sensor(uint8_t pin) {
+  this->pin = pin;
+  dht=new DHT(pin,DHT11);
 }
 
-float DHT11Sensor::readTemperature() 
-{
-  return dht->readTemperature();
+void DHT11Sensor::begin() {
+  dht.begin();
 }
 
-float DHT11Sensor::readHumidity() 
-{
-  return dht->readHumidity();
+float DHT11Sensor::readTemperature() {
+  return dht.readTemperature();
 }
 
-bool DHT11Sensor::alarmTemperature() 
-{
-  this->temperature = readTemperature(); 
-  this->humidity = readHumidity();
-  if (!isnan(this->temperature) && this->temperature >= 25) 
-    return true; 
-  else 
-    return false;
+float DHT11Sensor::readHumidity() {
+  return dht.readHumidity();
 }
 
-void DHT11Sensor::display() 
-{
-  if (!isnan(temperature) && !isnan(humidity)) 
-  {
-    Serial.print("Humidity: ");
-    Serial.print(this->humidity);
-    Serial.print(" %;  Temperature: ");
-    Serial.print(this->temperature);
-    Serial.println(" °C; ");
+void DHT11Sensor::display() {
+  float temperature = readTemperature();
+  float humidity = readHumidity();
+
+  Serial.print("Humidity: ");
+  Serial.print(humidity);
+  Serial.print(" %;");
+  Serial.print(" Temperature : ");
+  Serial.print(temperature);
+  Serial.println(" °C;");
+}
+
+bool DHT11Sensor::alarmTemperature() {
+  float temperature = readTemperature();
+  if (temperature > 25.0) {
+    return true;
   }
-  else 
-  {
-    Serial.println("Failed to read from DHT sensor!");
-  }
+  return false;
+>>>>>>> refs/remotes/origin/main
 }
