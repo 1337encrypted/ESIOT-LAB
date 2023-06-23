@@ -8,7 +8,6 @@ class buzzer
   private: 
     uint8_t buzzPin;
     bool buzzState;
-    int delayTime = 100;
 
   public:
     buzzer(uint8_t);
@@ -16,5 +15,7 @@ class buzzer
     void on();
     void off();
     void display();
+    void nonBlockOn();
+    void initBuzzer();
 };
 #endif  //END BUZZER_H

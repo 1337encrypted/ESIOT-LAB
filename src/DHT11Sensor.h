@@ -10,6 +10,7 @@ class DHT11Sensor
     uint8_t dhtPin;
     float temperature;
     float humidity;
+    const float CRITICALTEMPRATURE = 31;
 
   public:
     DHT11Sensor(uint8_t);
