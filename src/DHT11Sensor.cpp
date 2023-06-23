@@ -20,13 +20,19 @@ float DHT11Sensor::readHumidity() {
 void DHT11Sensor::display() {
   float temperature = readTemperature();
   float humidity = readHumidity();
-
-  Serial.print("Humidity: ");
-  Serial.print(humidity);
-  Serial.print(" %;");
-  Serial.print(" Temperature : ");
-  Serial.print(temperature);
-  Serial.println(" °C;");
+  if (!isnan(temperature) && !isnan(humidity)) 
+  {
+    Serial.print("Humidity: ");
+    Serial.print(humidity);
+    Serial.print(" %;");
+    Serial.print(" Temperature : ");
+    Serial.print(temperature);
+    Serial.println(" °C;");
+  }
+  else 
+  {
+    Serial.println("Failed to read from DHT sensor!");
+  }  
 }
 
 bool DHT11Sensor::alarmTemperature() {
