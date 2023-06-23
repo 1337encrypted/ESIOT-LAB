@@ -1,0 +1,140 @@
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame0,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame1,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame2,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame3,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame4,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame5,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame6,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame7,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame8,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame9,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame10,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame11,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame12,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame13,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame14,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame15,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame16,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame17,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame18,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame19,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame20,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame21,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame22,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame23,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame24,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame25,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame26,48,48, 1);
+display.display();
+delay(tt);
+
+display.clearDisplay();
+display.drawBitmap(xx, yy,frame27,48,48, 1);
+display.display();
+delay(tt);
