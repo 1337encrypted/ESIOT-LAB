@@ -18,7 +18,6 @@ constexpr uint8_t SCREEN_ADDRESS = 0x3C;                 // Address for 32x64 pa
 // constexpr uint8_t xx = 5;
 // constexpr uint8_t yy = 10;
 constexpr uint8_t tt = 0;
-constexpr int MDELAY = 1200;
 
 //Pins declaration
 constexpr uint8_t DHTPin = 4;
@@ -274,15 +273,49 @@ void weatherAnimate(uint8_t xx, uint8_t yy, bool show)
   delay(tt);
 }
 
+void weatherAnimateScroll(uint8_t xx, uint8_t yy, bool show)
+{
+  display.clearDisplay();
+  display.drawBitmap(xx, yy,frame5,48,48, 1);
+  if(show)displayData();
+  display.display();
+  delay(tt);
+
+  display.clearDisplay();
+  display.drawBitmap(xx, yy,frame10,48,48, 1);
+  if(show)displayData();
+  display.display();
+  delay(tt);
+
+  display.clearDisplay();
+  display.drawBitmap(xx, yy,frame15,48,48, 1);
+  if(show)displayData();
+  display.display();
+  delay(tt);
+
+  display.clearDisplay();
+  display.drawBitmap(xx, yy,frame21,48,48, 1);
+  if(show)displayData();
+  display.display();
+  delay(tt);
+
+  display.clearDisplay();
+  display.drawBitmap(xx, yy,frame27,48,48, 1);
+  if(show)displayData();
+  display.display();
+  delay(tt);
+}
+
 void scrollAnimation(void)
 {
   display.clearDisplay();
 
-  weatherAnimate(40,10,false);
+  weatherAnimateScroll(40,10,false);
   display.display();      // Show initial text
-  // delay(100);
+  delay(500);
 
-  display.startscrollleft(0x00, 0x0F);
-  delay(MDELAY);
-  display.stopscroll();
+  for(int i=40;i>5;i--)
+  {
+    weatherAnimateScroll(i,10,false);
+  }
 }

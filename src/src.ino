@@ -6,15 +6,18 @@ void setup()
   Wire.begin();                                   // Start Wire library for I2C
 
   // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
-  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;); // Don't proceed, loop forever
-  }      // initialize OLED with I2C addr 0x3C
+  while(1)
+  {
+    if(display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS))     // initialize OLED with I2C addr 0x3C
+      break; 
+    else
+      Serial.println(F("SSD1306 allocation failed")); 
+  }
+  
+  display.clearDisplay();                         // Clear the display buffer
+  display.setTextColor(WHITE);                    //Set the color - always use white despite actual display color
 
   buzz.initBuzzer();                              //Initialize the buzzer
-
-  display.setTextColor(WHITE);                    //Set the color - always use white despite actual display color
-  display.clearDisplay();                         // Clear the display buffer
 
   scrollAnimation();
 }
